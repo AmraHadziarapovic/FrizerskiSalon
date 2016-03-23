@@ -1,0 +1,212 @@
+body{
+	
+	background-image: url("wallpaper.jpg");
+}
+img{
+	
+	width:50%;
+	height:30%;
+}
+
+#zaglavlje{
+	
+	font-family: Goudy Old Style, Garamond, Big Caslon, Times New Roman, serif;
+	height: 90px;
+	background-image: url("http://eskipaper.com/polka-dot-wallpaper-11.html#gal_post_39866_polka-dot-wallpaper-11.jpg");
+
+}
+
+#zaglavlje h1{
+	
+	color:FF0066;
+	font-family: Brush Script MT,cursive;
+	text-align:center;
+	padding-top:10px;
+	font-size:70px;
+
+}
+#zaglavlje img{
+	width:3%;
+	height:25%;
+}
+
+#menu{
+	
+	width:100%;
+	height:7%;
+	font-size:100%;
+	text-align:center;
+	padding-top:2%;
+	
+	
+}
+#menu li{
+	
+	display:inline;
+}
+#menu ul{
+	
+	list-style:none;
+	margin:0;
+}
+
+#menu a{
+	font-family: Lucida Grande,Lucida Sans Unicode,Lucida Sans,Geneva,Verdana,sans-serif;
+	text-decoration:none;
+	color:black;
+	padding: 8px 8px 8px 8px 8px; 
+}
+#menu a:hover{
+	
+	color:FF9999;
+	
+	
+}
+
+.lijevo{
+	
+	margin: 1px 3px 25px 30px; 
+	float: left;
+	width: 21%;
+	background-color:white;
+	border: 5px solid black;
+	height:400px;
+	
+}
+
+.lijevo.neparan{
+	margin: 1px 3px 25px 30px; 
+	float: left;
+	width: 21%;
+	background-color:FFCCCC;
+	border: 5px solid black;
+	height:400px;
+	
+	
+}
+.lijevo.neparan h2{
+		font-family: Lucida Grande,Lucida Sans Unicode,Lucida Sans,Geneva,Verdana,sans-serif;
+		color: white;
+		padding-left: 10px;
+		padding-bottom: 15px;
+		padding-top:8px;
+		margin-top:auto;
+		margin-bottom: auto;
+		background-color:FF6699;
+}
+
+
+.lijevo.neparan p{
+		
+		font-family: Lucida Grande,Lucida Sans Unicode,Lucida Sans,Geneva,Verdana,sans-serif;
+		padding-left: 10px;
+		padding-bottom: 15px;
+		text-align:justify;
+		
+}
+
+.lijevo.neparan a{
+	    font-family: Lucida Grande,Lucida Sans Unicode,Lucida Sans,Geneva,Verdana,sans-serif;
+		padding-left: 10px;
+		color:black;
+	
+}
+
+
+.lijevo h2{
+		font-family: Lucida Grande,Lucida Sans Unicode,Lucida Sans,Geneva,Verdana,sans-serif;
+		color: white;
+		padding-left: 10px;
+		padding-bottom: 15px;
+		padding-top:8px;
+		margin-top:auto;
+		margin-bottom: auto;
+		background-color:FF6699;
+}
+
+
+.lijevo p{
+		
+		font-family: Lucida Grande,Lucida Sans Unicode,Lucida Sans,Geneva,Verdana,sans-serif;
+		padding-left: 10px;
+		padding-bottom: 15px;
+		text-align:justify;
+		
+}
+
+.lijevo a{
+	    font-family: Lucida Grande,Lucida Sans Unicode,Lucida Sans,Geneva,Verdana,sans-serif;
+		padding-left: 10px;
+		color:black;
+	
+}
+
+
+.lijevo.paran{
+	margin: 1px 3px 25px 30px; 
+	float: left;
+	width: 21%;
+	background-color:FF6699;
+	border: 5px solid black;
+	height:400px;
+	
+	
+}
+.lijevo.paran h2{
+		font-family: Lucida Grande,Lucida Sans Unicode,Lucida Sans,Geneva,Verdana,sans-serif;
+		color: white;
+		padding-left: 10px;
+		padding-bottom: 15px;
+		padding-top:8px;
+		margin-top:auto;
+		margin-bottom: auto;
+		background-color:FF6699;
+}
+
+.lijevo.paran p{
+		
+		font-family: Lucida Grande,Lucida Sans Unicode,Lucida Sans,Geneva,Verdana,sans-serif;
+		padding-left: 10px;
+		padding-bottom: 15px;
+		text-align:justify;
+		
+}
+
+.lijevo.paran a{
+	    font-family: Lucida Grande,Lucida Sans Unicode,Lucida Sans,Geneva,Verdana,sans-serif;
+		padding-left: 10px;
+		color:black;
+	
+}
+
+
+
+
+
+/* Kontakt */
+.forma {
+	padding-top: 25px; 
+	
+	}
+
+.pitanje {	
+	
+	font-weight: bold;
+
+	}
+	
+p.dno {		
+
+	text-align:center;
+	padding-top:5%;
+	padding-bottom:3%;
+	
+       }
+
+
+/* Linkovi */
+.linkovi  {	
+			list-style-image: url("pink_diamond.png");
+			padding-top: 25px;
+			}
+
