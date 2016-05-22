@@ -1,0 +1,309 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" >
+<HTML>
+
+<HEAD>
+
+<TITLE> Frizerski salon - Lush </TITLE>
+
+	<link rel="stylesheet" type="text/css" href="stil.css">
+
+	<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<script src="Filter.js"></script>
+
+</HEAD>
+
+<BODY>
+
+<div id="zaglavlje">
+	
+	<h1><img src="quality.png" alt="logo"> L U S H </h1>
+
+</div>
+
+<div id="menu">
+
+  <ul>
+    <li><a href="Početna.html#"> Početna &nbsp;&nbsp;</a></li>
+    <li><a href="Vijesti.php#"> Vijesti &nbsp;&nbsp;</a></li> 
+	<li><a href="Trending.html#"> Trending &nbsp;&nbsp;</a></li>
+	<li><a href="LogIn.php#"> Log in &nbsp;&nbsp;</a></li> 
+	<li><a href="Linkovi.html#"> Linkovi &nbsp;&nbsp;</a></li> 
+	<li><a href="Kontakt.html#"> Kontaktirajte nas !&nbsp;&nbsp;</a></li> 
+  </ul>
+
+</div>
+<br><br><br>
+<p id="odabirNovosti">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Prikaži:
+                <select name="filter" onchange="return filtriraj()">
+                    <option value="danasnje">Današnje vijesti</option>
+                    <option value="ovasedmica"> Ovosedmične vijesti</option>
+                    <option value="ovajmjesec">Ovomjesečne vijesti</option>
+                    <option value="sve">Sve vijesti</option>
+                </select>
+            </p>
+<label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sortiraj:&nbsp;</label><select id="sort" name="abc" onchange="return DatumAbeceda()">
+					    <option value="datum">Po datumu</option>
+					    <option value="abced">Abecedno</option>
+					    </select>
+<br><br>
+<div class="clanak">
+<div class="lijevo neparan">
+	
+	<h2 id="naslov1"> HIT </h2>
+	<img src="braids.jpg" alt="Pletenice">
+	<p class="neparni"> Posjetite nas i uvjerite se da i Vama dobro stoje.
+	</p><br><br><br><br><br>
+	<label class="datum">2016-03-31 02:59:01</label> 
+	</div>
+</div>
+<div class="clanak">
+<div class="lijevo paran">
+   
+	<h2 id="naslov2"> DIY </h2>
+	<img src="DIY.png" alt="DIY">
+	<p class="parni"> Uradite sami, posjetite link i isprobajte najpopularnije trikove za chic style. </p>
+	<br><br><br><br>
+	<label class="datum">2016-03-27 12:57:00</label>
+	</div>
+</div>
+<div class="clanak">
+<div class="lijevo neparan">
+	
+	<h2 id="naslov3"> Baliage </h2>
+	<img src="baliage.jpg" alt="Baliage">
+	<p class="neparni"> Doživite promjenu u našem salonu
+						Vama na usluzi,Lush</p>
+	<br><br><br><br><br>
+	<label class="datum">2016-02-15 12:00:00</label>
+	</div>
+</div>
+<div class="clanak">
+<div class="lijevo paran">
+	
+	<h2 id="naslov4"> TOP </h2>
+	<img src="conditioner.jpg" alt="Regenerator">
+	<p class="parni"> Sa Redken Cerafill Defy šamponom i regeneratorom, volumen kose je zagarantovan. </p>
+	<br><br><br><br>
+	<label class="datum">2016-04-01 18:00:00</label>
+</div>
+</div>
+<div class="clanak">
+<div class="lijevo neparan">
+
+	<h2 id="naslov5"> Suha kosa? </h2>
+	<img src="suhaKosa.jpg" alt="Suha kosa">
+	<p class="neparni"> Imate suhu kosu ali nemate rješenje? Isprobajte Wella Professionals Enrich šampon i regenerator. </p>
+	<br><br><br>
+	<label class="datum">2016-01-22 12:00:00</label>
+	</div>
+	
+</div>
+<div class="clanak">
+<div class="lijevo paran">
+	
+	<h2 id="naslov6"> Vjenčanje </h2>
+	<img src="vjencanje.jpg" alt="Vjencanje">
+	<p class="parni"> Bliži se datum Vašeg vjenčanja, a Vi još niste pronašli idealnu frizuru?
+		Lush tim se potrudio da Vam sastavi listu od čak njih 75.
+		Vama na usluzi, Lush </p>
+	<a href="http://bridalguide.com/beauty-health/beauty/wedding-hair/wedding-hairstyles-for-long-hair-and-short-hair#137122">Detaljnije</a>
+	<br>
+	<label class="datum">2016-03-31 02:59:01</label> 
+	</div>
+</div>
+<div class="clanak">
+<div class="lijevo neparan">
+
+	<h2 id="naslov7"> Kruna, da ili ne?</h2>
+	<img src="miumiu.jpg" alt="MiuMiu">
+	<p class="neparni"> Ukoliko pratite trendove, već ste primjetili sve veću popularnost kruna.
+                        Ovako je to predstavio brand MIU MIU.</p>
+	<br><br><br>
+	<label class="datum">2016-03-31 02:59:01</label> 
+	</div>
+</div>
+<div class="clanak">
+<div class="lijevo paran">
+	
+	<h2 id="naslov8"> Idealna frizura </h2>
+	<img src="perfect.png" alt="Frizura">
+	<p class="parni"> Uvijek ste se pitali koja frizura odgovara Vašem licu.
+    Mi Vam donosimo odgovore.	</p>
+	<a href="http://www.instyle.com/hair/find-perfect-cut-your-face-shape">Detaljnije</a>
+	<br><br><br><br>
+	<label class="datum">2016-03-31 02:59:01</label> 
+	</div>
+</div>
+<div class="clanak">
+<div class="lijevo neparan">
+	<h2 id="naslov9"> Lijepo, jeftino i kvalitetno. </h2>
+	<img src="access.png" alt="Img">
+	<p class="neparni">Ukoliko ste u potrazi za ukrasima za kosu, na linku ispod ćete pronaći sve što Vam treba.  </p>
+	<a href="http://uk.accessorize.com/uk/accessories/hair-accessories#pageSize=12&sort=newIn&category=acc_2.12&filtersClosed=false">Detaljnije</a>
+	<br><br>
+	<label class="datum">2016-03-31 02:59:01</label> 
+	</div>
+</div>
+<div class="clanak">
+<div class="lijevo paran">
+	
+	<h2 id="naslov10">  GaGa </h2>
+	<img src="gaga.png" alt="Gaga">
+	<p  class="parni"> Jedinstvena koja nikoga ne ostavlja ravnodušnim. </p>
+	<br><br><br><br><br>
+	<label class="datum">2016-03-31 02:59:01</label> 
+	</div>
+</div>
+<div class="clanak">
+<div class="lijevo neparan">
+	
+	<h2 id="naslov11"> Maska za kosu</h2>
+	<img src="domaca.jpg" alt="Maska za kosu">
+	<p class="neparni"> Probali ste sve, ali ne i prirodne maske za kosu?
+	U tom slučaju obavezno posjetite link ispod.
+	Vama na usluzi, Lush </p>
+	<a href="http://www.covermagazin.com/zdravlje.php?NID=177">Detaljnije</a>
+	<br><br>
+	<label class="datum">2016-03-31 02:59:01</label> 
+	</div>
+</div>
+<div class="clanak">
+<div class="lijevo paran">
+
+	<h2 id="naslov12"> Podsjetimo se </h2>
+	<img src="vintage.jpg" alt="Vintage">
+	<p class="parni"> Elegantno i profinjeno rješenje,ali da li bi bilo i Vaš izbor? </p>
+	<br><br><br><br><br>
+	<label class="datum">2016-03-31 02:59:01</label> 
+	</div>
+	
+</div>
+<div class="clanak">
+<div class="lijevo neparan">
+
+	<h2 id="naslov13"> Pegla za kosu</h2>
+	<img src="pegla.jpg" alt="Pegla za kosu">
+	<p class="neparni"> U protekloj godini je zauzela prvo mjesto, Remington sleek and smooth pegla za kosu. </p>
+	<br><br><br><br>
+	<label class="datum">2016-03-31 02:59:01</label> 
+	</div>
+</div>
+<div class="clanak">
+<div class="lijevo paran">
+	
+	<h2 id="naslov14"> Kratka kosa </h2>
+	<img src="kratka.jpg" alt="Kratka kosa">
+	<p class="parni"> Odlučni ste, želite promjenu? Za pomoć pri odabiru posjetite link. </p>
+	<a href="http://www.marieclaire.com/beauty/hair/g409/short-hair-how-to-hairstyles/">Detaljnije</a>
+	<br><br><br><br><br>
+	<label class="datum">2016-03-31 02:59:01</label> 
+	</div>
+</div>
+<div class="clanak">
+<div class="lijevo neparan">
+
+	<h2 id="naslov15"> Maska </h2>
+	<img src="maska.jpg" alt="Maska">
+	<p class="neparni"> Želite glatku, sjajnu kosu? Predstavljamo Vam samo najbolje,
+SmoothSexyHair!
+Vama na usluzi, Lush	</p>
+<br><br>
+<label class="datum">2016-03-31 02:59:01</label>
+     </div> 
+</div>
+<div class="clanak">
+<div class="lijevo paran">
+	
+	<h2 id="naslov16"> Za svaku priliku </h2>
+	<img src="frizura.jpg" alt="Frizura2">
+	<p class="parni"> Frizura za svaku priliku. Ukoliko biste je rado imali, posjetite Lush. </p>
+	<br><br><br><br><br>
+	<label class="datum">2016-03-31 02:59:01</label>
+	</div>
+</div>
+<div class="clanak">
+<div class="lijevo neparan">
+	
+	<h2 id="naslov17"> Bez amonijaka! </h2>
+	<img src="farba.jpg" alt="Farba">
+	<p class="neparni"> Na linku ispod ćete naći sve potrebne informacije o farbama na prirodnoj bazi.
+	Vama na usluzi,Lush</p><a href="http://prirodnakozmetika.com/logonacolorcreams.html">Detaljnije</a>
+	<br><br>
+	<label class="datum">2016-03-31 02:59:01</label> 
+	</div>
+</div>
+<div class="clanak">
+<div class="lijevo paran">
+	
+	<h2 id="naslov18"> Ombre </h2>
+	<img src="ombre.jpg" alt="Ombre">
+	<p class="parni"> Osvježite Vaš izgled ombre tehnikom farbanja.
+		Posjetite nas i uvjerite se u naše sposobnosti.
+		Vama na usluzi,Lush</p>
+	<br><br><br>
+	<label class="datum">2016-03-31 02:59:01</label> 
+	</div>
+</div>
+<div class="clanak">
+<div class="lijevo neparan">
+	
+	<h2 id="naslov19"> Podsjetimo se</h2>
+	<img src="marilyn.png" alt="Marilyn">
+	<p class="neparni"> Uvijek u trendu, neprevaziđena frizura slavne Marilyn Monroe. </p>
+	<br><br><br><br><br>
+	<label class="datum">2016-03-31 02:59:01</label> 
+	</div>
+</div>
+<div class="clanak">
+<div class="lijevo paran">
+
+	<h2 id="naslov20"> Redken Cerafill </h2>
+	<img src="cerafill.jpg" alt="Cerafill">
+	<p class="parni"> Suočavate se sa gubitkom kose? Ne očajavajte, Lush Vam donosi rješenje. </p>
+	<br><br><br><br>
+	<label class="datum">2016-03-31 02:59:01</label> 
+    </div>
+</div>
+
+<br><br><br>
+<br><br><br>
+<br><br><br>
+<br><br><br>
+<br><br><br>
+<br><br><br>
+<br><br><br>
+<br><br><br>
+<br><br><br>
+<br><br><br>
+<br><br><br>
+<br><br><br>
+<br><br><br>
+<br><br><br>
+<br><br><br>
+
+<br><br><br>
+<br><br><br>
+<br><br><br>
+<br><br><br>
+<br><br><br>
+<br><br><br>
+<br><br><br>
+<br><br><br>
+<br><br><br>
+<br><br><br>
+<br><br><br>
+<br><br><br>
+<br><br><br>
+<br><br><br>
+<br><br><br>
+<br><br><br>
+<br><br><br>
+<br><br><br>
+<br><br><br>
+<br><br><br>
+<br><br><br>
+<br><br><br>
+<div id="podnozje"> </div>
+
+</BODY>
+</HTML>

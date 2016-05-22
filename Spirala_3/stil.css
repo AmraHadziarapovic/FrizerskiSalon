@@ -1,0 +1,299 @@
+body{
+	
+	background-image: url("da.jpg");
+	width:100%;
+
+}
+img{
+	
+	width:50%;
+	height:30%;
+}
+
+#zaglavlje{
+	
+	font-family: Goudy Old Style, Garamond, Big Caslon, Times New Roman, serif;
+	height: 142px;
+	width:100%;
+	background-image: url("http://eskipaper.com/polka-dot-wallpaper-11.html#gal_post_39866_polka-dot-wallpaper-11.jpg");
+    background-color:black;
+	margin-top: -9px;
+    margin-bottom:-9px;
+    margin-right:-9px;
+    margin-left: -9px;
+}
+
+#zaglavlje h1{
+	
+	color:white;
+	font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;;
+	text-align:left;
+	padding-top:20px;
+	font-size:70px;
+
+}
+#zaglavlje img{
+	width:7%;
+	height:50%;
+}
+
+#menu{
+	
+	width:100%;
+	height:7%;
+	font-size:100%;
+	text-align:center;
+	padding-top:1%;
+	
+	
+}
+#menu li{
+	
+	display:inline;
+}
+#menu ul{
+	
+	list-style:none;
+	margin:0;
+	text-align:left;
+	margin-top:-27px;
+
+}
+
+#menu a{
+	font-family: Lucida Grande,Lucida Sans Unicode,Lucida Sans,Geneva,Verdana,sans-serif;
+	text-decoration:none;
+	color:white;
+}
+#menu a:hover{
+	
+	color:black;
+	
+	
+}
+.datum{
+	
+	font-style:italic;
+	font-size:14px;
+}
+
+.lijevo{
+	
+	margin: 1px 3px 25px 30px; 
+	float: left;
+	width: 21%;
+	background-color:white;
+	border: 5px solid black;
+	height:400px;
+	
+}
+
+.lijevo.neparan{
+	margin: 1px 3px 25px 30px; 
+	float: left;
+	width: 21%;
+	background-color:ffddcc;
+	border: 5px solid black;
+	height:400px;
+	
+	
+}
+.lijevo.neparan h2{
+		font-family: Lucida Grande,Lucida Sans Unicode,Lucida Sans,Geneva,Verdana,sans-serif;
+		color: black;
+		padding-left: 10px;
+		padding-bottom: 15px;
+		padding-top:8px;
+		margin-top:auto;
+		margin-bottom: auto;
+		background-color:ffccb3;
+}
+
+
+.lijevo.neparan p{
+		
+		font-family: Lucida Grande,Lucida Sans Unicode,Lucida Sans,Geneva,Verdana,sans-serif;
+		padding-left: 10px;
+		padding-bottom: 15px;
+		text-align:justify;
+		
+}
+
+.lijevo.neparan a{
+	    font-family: Lucida Grande,Lucida Sans Unicode,Lucida Sans,Geneva,Verdana,sans-serif;
+		padding-left: 10px;
+		color:black;
+	
+}
+
+
+.lijevo h2{
+		font-family: Lucida Grande,Lucida Sans Unicode,Lucida Sans,Geneva,Verdana,sans-serif;
+		color: black;
+		padding-left: 10px;
+		padding-bottom: 15px;
+		padding-top:8px;
+		margin-top:auto;
+		margin-bottom: auto;
+		background-color:ffccb3;
+}
+
+
+.lijevo p{
+		
+		font-family: Lucida Grande,Lucida Sans Unicode,Lucida Sans,Geneva,Verdana,sans-serif;
+		padding-left: 10px;
+		padding-bottom: 15px;
+		text-align:justify;
+		
+}
+
+.lijevo a{
+	    font-family: Lucida Grande,Lucida Sans Unicode,Lucida Sans,Geneva,Verdana,sans-serif;
+		padding-left: 10px;
+		color:black;
+	
+}
+
+
+.lijevo.paran{
+	margin: 1px 3px 25px 30px; 
+	float: left;
+	width: 21%;
+	background-color:ffccb3;
+	border: 5px solid black;
+	height:400px;
+	
+	
+}
+.lijevo.paran h2{
+		font-family: Lucida Grande,Lucida Sans Unicode,Lucida Sans,Geneva,Verdana,sans-serif;
+		color: black;
+		padding-left: 10px;
+		padding-bottom: 15px;
+		padding-top:8px;
+		margin-top:auto;
+		margin-bottom: auto;
+		background-color:ffccb3;
+}
+
+.lijevo.paran p{
+		
+		font-family: Lucida Grande,Lucida Sans Unicode,Lucida Sans,Geneva,Verdana,sans-serif;
+		padding-left: 10px;
+		padding-bottom: 15px;
+		text-align:justify;
+		
+}
+
+.lijevo.paran a{
+	    font-family: Lucida Grande,Lucida Sans Unicode,Lucida Sans,Geneva,Verdana,sans-serif;
+		padding-left: 10px;
+		color:black;
+	
+}
+
+
+
+
+
+/* Kontakt */
+.forma {
+	padding-top: 25px; 
+	
+	}
+
+
+.pitanje {	
+	
+	font-weight: bold;
+
+	}
+	
+p.dno {		
+
+	text-align:center;
+	padding-top:5%;
+	padding-bottom:1%;
+	
+       }
+p.prvi{
+	
+	text-align:center;
+	font-family: Lucida Grande,Lucida Sans Unicode,Lucida Sans,Geneva,Verdana,sans-serif;
+	font-size:40px;
+	color:black;
+	padding-top:-87px;
+	
+}
+
+
+/* Linkovi */
+.linkovi  {	
+			list-style-image: url("pink_diamond.png");
+			padding-top: 25px;
+			}
+
+#podnozje{
+	
+	font-family: Goudy Old Style, Garamond, Big Caslon, Times New Roman, serif;
+	height: 70px;
+    background-color:black;
+	margin-top: 250px;
+    margin-right:-9px;
+    margin-left: -9px;
+	margin-bottom:-9px;
+	height:100px;
+	width:100%;
+}
+
+.forma{
+	
+	line-height: 31px;
+    width: 100%;
+	text-align:center;
+	margin-top: 1%;
+    margin-bottom: 5%;
+}
+
+
+input[type=text] {
+	
+	padding:5px; 
+    border:2px solid #ccc; 
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+
+}
+input[type=password] {
+	
+	padding:5px; 
+    border:2px solid #ccc; 
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+
+}
+input[type=email] {
+	
+	padding:5px; 
+    border:2px solid #ccc; 
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+
+}
+input[type=submit] {
+    padding:5px 15px; 
+    background:#ccc; 
+    border:0 none;
+    cursor:pointer;
+    -webkit-border-radius: 5px;
+    border-radius: 5px; 
+}
+input[type=textarea] {
+	
+	padding:5px; 
+    border:2px solid #ccc; 
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+
+}
