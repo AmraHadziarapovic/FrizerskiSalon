@@ -43,7 +43,7 @@ session_start();
 <div id="menu">
 
   <ul>
-    <li><a href="Početna.html#"> Početna &nbsp;&nbsp;</a></li>
+    <li><a href="index.html#"> Početna &nbsp;&nbsp;</a></li>
     <li><a href="Vijesti.php#">  Vijesti &nbsp;&nbsp;</a></li> 	
 	<li><a href="Trending.html#"> Trending &nbsp;&nbsp;</a></li> 
 	<li><a href="LogIn.php#"> Log in &nbsp;&nbsp;</a></li> 
