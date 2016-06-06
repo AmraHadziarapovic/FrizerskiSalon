@@ -106,6 +106,13 @@ textarea{
     border-radius: 5px;
 	
 }
+select{
+	padding:5px; 
+    border:2px solid #ccc; 
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+	
+}
 #Forma{
 	
 	text-align:left;

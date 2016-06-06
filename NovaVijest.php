@@ -32,7 +32,8 @@ session_start();
 			}
 			else
 			{
-				echo "Niste prijavljeni!";
+				echo "Niste prijavljeni!";echo"<br>"; 
+				header('Location: LogIn.php');
 			}
 	?>
 	</div>
@@ -57,10 +58,10 @@ session_start();
 
 <?php
 date_default_timezone_set("Europe/Sarajevo");
-
+$brojac=2;
 if(isset($_POST['dodaj'])){
 	
-	if($_POST['naslov']!=" " && $_POST['sadrzaj']!=" " && $_POST['url']!=" " )//&& $_POST['kodDrzave'])&& (!empty($_POST['pozivniBroj'])))
+	if($_POST['naslov']!=" " && $_POST['sadrzaj']!=" " && $_POST['url']!=" " )
 	{
 		function izbaci($el){
 			
@@ -69,11 +70,29 @@ if(isset($_POST['dodaj'])){
 		}
 		$datum=date('d.m.Y H:i:s');
 		$podaci=array($_POST['naslov'],$_POST['sadrzaj'],$_POST['url'],$datum);
-		$novosti=fopen("KreiraneNovosti.csv","a") or die("Datoteka se ne može otvoriti");
-		fputcsv($novosti,$podaci,",");
-		fclose($novosti);
-		echo "<p>Uspješno ste dodali novost!</p>";
-	
+		$naslov=$_POST['naslov'];
+		$sadrzaj=$_POST['sadrzaj'];
+		$tel=$_POST['telefonskiBroj'];
+		$url=$_POST['url'];
+		$kod=$_POST['kodDrzave'];
+		
+		$izbor=$_REQUEST['daLi'];
+		$korisnik=$_SESSION['korisnik'];
+		$veza = new PDO("mysql:dbname=lush;host=localhost;charset=utf8", "lush", "hairdresser");
+        $veza->exec("set names utf8");
+        $rezultat = $veza->query("INSERT INTO novost SET id='$brojac', naslov='$naslov', sadrzaj='$sadrzaj',telefon='$tel',url='$url',kod='$kod',datum='$datum',omoguceni='$izbor'");
+		//$rezultat2= $veza->query("INSERT INTO autor a SET novost='$brojac' WHERE a.user='$korisnik'");
+        if (!$rezultat) //|| !$rezultat2) {
+
+          $greska = $veza->errorInfo();
+          print "SQL greška: " . $greska[2];
+          exit();
+        }
+		else{
+				
+			echo "<p>Uspješno ste dodali novost!</p>";
+			$brojac++;
+		}
 	}
 	else{
 			echo "<p>Morate unijeti sva polja!</p>";		
@@ -91,9 +110,14 @@ if(isset($_POST['dodaj'])){
 	<textarea id="sadrzaj" rows="10" cols="50" onblur="ValidirajSadrzaj()" name="sadrzaj" required> </textarea><br><br>
 	<label>URL Slike :&nbsp;&nbsp;&nbsp;<input type="text" name="url" id="url" onblur="ValidirajURL()" required></label><br><br>
     <label>Kod države: &nbsp;&nbsp;<input type="text" name="kodDrzave" id="kod" onblur="ValidirajKod()" required></label><br><br>
-	<label id="l1">Telefon:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="telefonskiBroj" id="tel" onblur="ValidirajTelefon()" required></label><br><br> 
+	<label id="l1">Telefon:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="telefonskiBroj" id="tel" onblur="ValidirajTelefon()" required></label>
+	<br><br>
+	<label>Omogućiti komentare:&nbsp;</label><select id="sort" name="daLi">
+					    <option value="da">Da</option>
+					    <option value="ne">Ne</option>
+					    </select>
 	
-	<input type="submit" value="Potvrdi" name="dodaj"> 
+	<br><br><input type="submit" value="Potvrdi" name="dodaj"> 
 
 </form>
 <div id="podnozje"> </div>

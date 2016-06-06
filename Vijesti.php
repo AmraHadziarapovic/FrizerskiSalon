@@ -13,7 +13,7 @@ session_start();
 	<link rel="stylesheet" type="text/css" href="vijesti.css">
 
 	<META http-equiv="Content-Type" content="text/html; charset=utf-8">
-	<script src="skripta.js"></script>
+<!-- <script src="skripta.js"></script>  -->
 </HEAD>
 
 <BODY>
@@ -29,7 +29,7 @@ session_start();
 			if(isset($_SESSION["korisnik"]))
 			{
 				echo "&nbsp;&nbsp;&nbsp;Prijavljeni ste kao: ".$_SESSION["korisnik"];
-				echo "<a href='#'>Odjava</a>";
+				echo "<br><a href='LogOut.php#'>Odjava</a>";
 			}
 			else
 			{
@@ -49,7 +49,7 @@ session_start();
 	<li><a href="LogIn.php#"> Log in &nbsp;&nbsp;</a></li> 
 	<li><a href="Linkovi.html#"> Linkovi &nbsp;&nbsp;</a></li> 
 	<li><a href="Kontakt.html#"> Kontaktirajte nas !</a></li> 
-		<a href="" class="odjava">Odjava</a>
+	
   </ul>
 
 </div>
@@ -82,8 +82,8 @@ session_start();
 			$t1=$dateTime1->format('U'); 
 			$t2=$dateTime2->format('U'); 
 			return $t2-$t1;*/
-			$prvi=$a['datum'];
-			$drugi=$b['datum'];
+			$prvi=$a['vrijeme'];
+			$drugi=$b['vrijeme'];
 			return strcmp($prvi,$drugi);
 			}  
 			
@@ -98,20 +98,38 @@ session_start();
 			$vijesti;
 			$brojac=0;
 			
-			$handle=fopen("KreiraneNovosti.csv","r");
-			while(!feof($handle)){
-				$niz=fgetcsv($handle);
-				
-			    $niz2=Array("naslov"=>$niz[0], 
-					   "sadrzaj"=>$niz[1],
-					   "url"=>$niz[2],
-					   "datum"=>$niz[3]);
+
+$veza = new PDO("mysql:dbname=lush;host=localhost;charset=utf8", "lush", "hairdresser");
+     $veza->exec("set names utf8");
+
+     $rezultat = $veza->query("select id, naslov, sadrzaj, UNIX_TIMESTAMP(datum) vrijeme, url from novost order by datum desc");
+
+     if (!$rezultat) {
+
+          $greska = $veza->errorInfo();
+          print "SQL greška: " . $greska[2];
+          exit();
+     }
+
+	$vijesti;
+	$i=0;
+     foreach ($rezultat as $vijest) {
+      
+		  echo 
+			'
+					<div class="lijevo"> 
+						<h2>'.$vijest['naslov'].'</h2>
+						<img src='.$vijest['url'].'alt="Slika">
+						<p class="parni">'.$vijest['sadrzaj'].'</p><br>
+						<label class="datum">'.date("d.m.Y. (h:i)", $vijest['vrijeme']).'</label>
+					</div>
 			
-			    $vijesti[$brojac]=$niz2;
-			    $brojac++;
-	
-			}
-			if(isset($_REQUEST['sortiraj']))
+			';
+		$vijesti[$i]=$vijest;
+		$i++;
+     }
+	 
+	 if(isset($_REQUEST['sortiraj']))
 			{
 				$izbor=$_REQUEST['odabir'];
 			
@@ -125,36 +143,8 @@ session_start();
 				}
 			
 			}
-			
-		for($i=0;$i<count($vijesti);$i++)
-		{
-			
-			$naslov=izbaci($vijesti[$i]['naslov']);
-			$sadrzaj=izbaci($vijesti[$i]['sadrzaj']);
-			$link=izbaci($vijesti[$i]['url']);
-			$datum=$vijesti[$i]['datum'];
 
-			//$naslov=izbaci($vijesti[0]);
-			//$sadrzaj=izbaci($vijesti[1]);
-			//$link=izbaci($vijesti[2]);
-			//$datum=izbaci($vijesti[3]);
-		
-			echo 
-			'
-					<div class="lijevo"> 
-						<h2>'.$naslov.'</h2>
-						<img src='.$link.'alt="Slika">
-						<p class="parni">'.$sadrzaj.'</p><br>
-						<label class="datum">'.$datum.'</label>
-					</div>
-			
-			';
-			//}
-				
-		}
-		
-	
-fclose($handle);
+
 
 ?>
 

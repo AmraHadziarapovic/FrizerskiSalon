@@ -35,51 +35,27 @@
 <br><br><br>
 <br><br><br>
 <?php
- 	$datoteka=file('podaci.csv');
-	
-	foreach($datoteka as $red)
-	{
-		$niz=explode(',',$red);
-	
-		if(isset($_POST['login'])) //&& !empty($_POST['username'])&& !empty($_POST['password']))
+		
+		if(isset($_POST['login']))
 		{
+			$ime=$_POST['username'];
+			$pas=$_POST['password'];
 			
+					$veza = new PDO("mysql:dbname=lush;host=localhost;charset=utf8", "lush", "hairdresser");
+					$veza->exec("set names utf8");
+					$osoba=$veza->query("select a.id,a.pass,a.user from autor a where a.user='$ime' and a.pass='$pas'");
+					$niz=$osoba->fetch(PDO::FETCH_ASSOC);
+
+						$korisnik=$niz['user'];
+						$poruka="Uspješno ste prijavljeni.";
+						print "<div>.$poruka</div>";
+						session_start();
+						if(!empty($korisnik)){
+						$_SESSION['korisnik']=$korisnik;
+						header('Location: NovaVijest.php');
+						}
+				 }
 			
-			if($_POST['username'] == 'admin' && sha1($_POST['password']) == 'd033e22ae348aeb5660fc2140aec35850c4da997')//===$niz[0] && $_POST['password']===$niz[1])
-			{
-			
-				$poruka="Uspješno ste prijavljeni.";
-				print "<div>.$poruka</div>";
-				session_start();
-				$_SESSION['korisnik']=$niz[0];
-				header('Location: NovaVijest.php');
-					
-			}
-			
-			else{
-				print " ";
-				if($_POST['username']!='admin' || sha1($_POST['password']) != 'd033e22ae348aeb5660fc2140aec35850c4da997' )
-				{
-					$poruka="Neispravan username ili password.";
-					print "<div>.$poruka</div>";
-				}
-			}
-			
-		}
-	}
-			/*
-			else if($_POST['username'] != 'admin' && $_POST['password'] != 'admin'){
-				$poruka="Korisničko ime ili lozinka neispravni.";
-				print "<div>.$poruka</div>";
-			}
-			else {
-				
-				$poruka="Unesite podatke";
-				print "<div>.$poruka</div>";
-				
-			}*/
-			
- 
  ?>
 
 <form action="LogIn.php" method="POST">
